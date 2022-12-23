@@ -58,3 +58,10 @@ h1 {
   margin-top: 0%;
   padding: 1px 30px;
 }
+
+.github {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #b9bbbc;
+}
