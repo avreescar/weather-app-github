@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/c94e52a13f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container middle">
+      <form id="city-search">
+        <div class="searchbar">
+          <input type="text" placeholder="Search for location" id="search" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="current-location">
+        <a href="#" class="location-link">Current location</a>
+      </div>
+      <hr />
+      <br />
+      <div class="row">
+        <div class="col-4 text-left">
+          <h3 id="city">Please Select a City</h3>
+          <p class="date-design" id="current-date"></p>
+          <p id="description">Sunny</p>
+        </div>
+        <div class="col-4 text-center">
+          <h1>
+            <span id="temperature">0</span>°
+            <a href="#" class="temperature-value" id="cel">C</a>
+            <span class="temperature-value">| </span>
+            <a href="#" class="temperature-value" id="far">F</a>
+          </h1>
+        </div>
+        <div class="col-4 text-center">
+          <p>
+            Humidity: <span id="humidity">49</span>% <br />
+            Wind: <span id="wind">23</span> km/h
+          </p>
+        </div>
+      </div>
+      <div class="row text-center weather-grid">
+        <div class="col">
+          <p>
+            MONDAY
+            <i class="fa-solid fa-sun weather-icon sunny"></i>
+            15°C | 3°C
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            TUESDAY
+            <i class="fa-solid fa-sun weather-icon sunny"></i>
+            16°C | 6°C
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            WEDNESDAY
+            <i class="fa-solid fa-cloud-rain weather-icon rainy"></i>
+            12°C | 1°C
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            THURSDAY
+            <i class="fa-solid fa-cloud-rain weather-icon rainy"></i>
+            15°C | 4°C
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            FRIDAY
+            <i class="fa-solid fa-sun weather-icon sunny"></i>
+            18°C | 7°C
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
