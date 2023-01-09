@@ -49,8 +49,10 @@ h1 {
 }
 
 .temperature-value {
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
+  position: relative;
+  top: -32px;
 }
 
 .location-link {
