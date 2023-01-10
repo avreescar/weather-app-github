@@ -67,3 +67,11 @@ h1 {
   font-size: 12px;
   color: #b9bbbc;
 }
+
+.icon {
+  position: relative;
+}
+
+.description {
+  text-transform: capitalize;
+}

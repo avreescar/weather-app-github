@@ -57,6 +57,14 @@ function showWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      response.data.condition.icon_url,
+      "alt",
+      response.data.condition.icon
+    );
 }
 
 //Find city
