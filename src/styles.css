@@ -48,13 +48,6 @@ h1 {
   margin-bottom: 0%;
 }
 
-.temperature-value {
-  font-size: 16px;
-  text-align: left;
-  position: relative;
-  top: -32px;
-}
-
 .location-link {
   display: block;
   margin-top: 0%;
@@ -68,10 +61,34 @@ h1 {
   color: #b9bbbc;
 }
 
-.icon {
-  position: relative;
-}
-
 .description {
   text-transform: capitalize;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
