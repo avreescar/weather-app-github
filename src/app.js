@@ -82,7 +82,7 @@ function handleSubmit(event) {
 }
 
 function retrievePosition(position) {
-  let apiKey = "73ab8o053842b65ed0fft2ac57fdd65ec";
+  let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
