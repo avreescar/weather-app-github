@@ -7,11 +7,6 @@ body {
   );
 }
 
-h1 {
-  font-size: 60px;
-  font-weight: 800px;
-}
-
 .searchbar {
   margin: 30px;
 }
@@ -78,17 +73,17 @@ h1 {
   font-weight: 400;
 }
 
-.weather-temperature .units {
+.units {
   position: relative;
   font-size: 16px;
   top: -34px;
 }
 
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
+.active {
+  color: black;
   cursor: default;
 }
 
-.weather-temperature .active:hover {
-  text-decoration: none;
+.active:hover {
+  color: black;
 }
