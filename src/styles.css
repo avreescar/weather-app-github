@@ -36,10 +36,6 @@ body {
   margin-top: 30px;
 }
 
-.weather-grid {
-  margin-top: 50px;
-}
-
 .date-design {
   margin-bottom: 0%;
 }
@@ -55,6 +51,7 @@ body {
   text-align: center;
   font-size: 12px;
   color: #b9bbbc;
+  margin-top: 30px;
 }
 
 .description {
@@ -92,6 +89,8 @@ body {
 .weather-forecast {
   font-size: 14px;
   color: black;
+  margin-top: 50px;
+  text-align: center;
 }
 
 .forcast-temp-low {

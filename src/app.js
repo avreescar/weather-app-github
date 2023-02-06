@@ -43,7 +43,28 @@ function appDate() {
 }
 appDate();
 
-//Change temp on page
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = ["Thurs", "Fri", "Sat", "Sun", "Mon"];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+        <div class="forcast-date">${day}</div>
+          <i class="fa-solid fa-sun weather-icon sunny"></i>
+            <div class="forcast-temp">
+              <span class="forcast-temp-high">18° </span>
+              <span class="forcast-temp-low">3°</span>
+            </div>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   celsiusTemperature = response.data.temperature.current;
 
@@ -92,12 +113,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-let searchForm = document.querySelector("#city-search");
-searchForm.addEventListener("submit", handleSubmit);
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
 function displayFahrenheit(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temperature");
@@ -115,6 +130,12 @@ function displayCelsius(event) {
   tempElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+let searchForm = document.querySelector("#city-search");
+searchForm.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -122,3 +143,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
+
+displayForecast();
